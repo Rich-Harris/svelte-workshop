@@ -84,6 +84,7 @@ pre {
 	background: #181818;
 	tab-size: 2;
 	padding: 0.5em;
+	overflow-x: auto;
 }
 
 code {
