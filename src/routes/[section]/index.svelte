@@ -24,6 +24,17 @@
 
 <div class="content">{@html section.html}</div>
 
-<style>
+{#if section.next}
+	<p class="next">Next: <a href="{section.next.slug}#">{section.next.title}</a></p>
+{/if}
 
+<style>
+	.hero {
+
+	}
+
+	.next {
+		padding: 1em 0;
+		border-top: 1px solid var(--gray);
+	}
 </style>

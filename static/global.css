@@ -36,11 +36,16 @@ body {
 	--font: 'Overpass', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 
+	--text: #bbb;
+	--highlight: #ddd;
+	--gray: #333;
+	--light-gray: #444;
+
 	margin: 0;
 	font-size: 14px;
 	line-height: 1.5;
-	color: #eee;
-	background: #222;
+	color: var(--text);
+	background: #111;
 
 
 	/* font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -48,9 +53,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
+	margin: 1em 0 0.5em 0;
 	font-weight: 400;
 	line-height: 1.2;
+	color: var(--highlight);
 }
 
 h1 {
@@ -62,17 +68,35 @@ h1, h2 {
 	line-height: 1.25;
 }
 
+h2 {
+	margin-top: 2em;
+}
+
 a {
 	color: inherit;
+}
+
+strong {
+	color: var(--highlight);
+}
+
+pre {
+	background: #181818;
+	tab-size: 2;
+	padding: 0.5em;
 }
 
 code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);
-	color: #bbb;
-	background-color: #f0f0f0;
+	color: var(--text);
+	background-color: 181818;
 	padding: 0.2em 0.4em;
 	border-radius: 2px;
+}
+
+pre code {
+	padding: 0;
 }
 
 @media (min-width: 400px) {

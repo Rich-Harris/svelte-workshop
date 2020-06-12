@@ -49,8 +49,9 @@
 
 <style>
 	.container {
+		--sidebar-width: 250px;
 		display: grid;
-		grid-template-columns: 400px 1fr;
+		grid-template-columns: var(--sidebar-width) 1fr;
 		min-height: 100vh;
 	}
 
@@ -58,9 +59,10 @@
 		position: fixed;
 		top: 0;
 		left: 0;
+		width: var(--sidebar-width);
 		height: 100vh;
 		overflow: auto;
-		border-right: 1px solid #333;
+		border-right: 1px solid var(--gray);
 	}
 
 	main {
@@ -81,6 +83,7 @@
 	li {
 		padding: 0;
 		font-weight: 700;
+		color: var(--highlight);
 	}
 
 	li li {
@@ -103,6 +106,6 @@
 	}
 
 	.active {
-		background-color: #333;
+		background-color: var(--gray);
 	}
 </style>

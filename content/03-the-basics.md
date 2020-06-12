@@ -5,7 +5,7 @@ title: The basics
 https://svelte.dev/tutorial
 
 
-## Behind the scenes
+## Compilers 101
 
 * show the JS/CSS output, for both dom/ssr modes
 * show AST explorer
