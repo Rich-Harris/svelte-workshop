@@ -2,9 +2,4 @@
 title: More to explore
 ---
 
-## Svelte GL
-
-## Dataviz
-
-* Pancake
-* Layercake
+See previous section.
