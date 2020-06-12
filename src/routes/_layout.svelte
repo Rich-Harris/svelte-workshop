@@ -15,8 +15,6 @@
 	let hash = typeof window !== 'undefined'
 		? window.location.hash.slice(1)
 		: '';
-
-	$: console.log({ segment, hash });
 </script>
 
 <svelte:window on:hashchange={() => hash = window.location.hash.slice(1)}/>
