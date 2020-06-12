@@ -46,7 +46,7 @@ For the final stage of the workshop, we're going to use various free services th
 * [Fauna](https://fauna.com)
 * [Auth0](https://auth0.com)
 * [Weatherbit](https://www.weatherbit.io) (this one takes a little while to provision API keys, so don't wait until you need it!)
-* [Vercel](https://vercel.com) (optional — so that you can deploy your app)
+* [Vercel](https://vercel.com) (optional — so that you can deploy your app). You'll also need to install (or update) the Vercel CLI globally with `npm i -g vercel`
 
 ## Okay, ready?
 
