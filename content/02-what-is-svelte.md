@@ -4,6 +4,7 @@ title: What is Svelte?
 
 There's a lot of different ways to describe Svelte, but let's start with this: Svelte is a **component framework**. In other words, it serves a similar purpose to projects like React and Vue.
 
+
 ## What is a framework?
 
 Component frameworks exist to help you write apps more **declaratively**. That word gets used a lot, so it's helpful to understand what we mean when we say that.
@@ -95,6 +96,13 @@ Compiler-centric design has a number of tangible advantages:
 * Your apps will be easier to write, because we have more control over the authoring experience. We don't have the same constraints other people do
 
 In particular, Svelte allows you to [write less code](https://svelte.dev/blog/write-less-code), which means fewer bugs and more time spent outdoors.
+
+Beyond that, Svelte aims to make your life easier by providing answers to questions that almost every app will raise at some point, and which often involve finding and adding extra libraries:
+
+* How do we manage cross-component state?
+* How do we add motion and element transitions?
+* How do we handle user input via form elements?
+* How do we add CSS to our components without polluting the global scope?
 
 
 ## Who makes it?
