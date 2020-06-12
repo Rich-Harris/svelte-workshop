@@ -29,7 +29,7 @@ I've spent my career in digital journalism, using JavaScript to tell stories in 
 
 That's the day job. By night, I work on open source projects like Svelte, which I started in 2016.
 
-What else do you want to know? AMA.
+What else do you want to know? AMA. You can find me on Twitter at [@rich_harris](https://twitter.com/rich_harris).
 
 
 ## Acknowledgments
