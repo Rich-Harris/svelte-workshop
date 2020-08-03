@@ -131,7 +131,7 @@ export default {
 +	plugins: [
 +		resolve(),
 +		svelte({
-+			css: result => result.write('public/bundle/bundle.css')
++			css: result => result.write('public/build/bundle.css')
 +		})
 +	]
 };
