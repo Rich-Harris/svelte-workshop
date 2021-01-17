@@ -23,7 +23,6 @@ cd my-project
 mkdir src
 ```
 
-
 ## Installing Rollup
 
 As of June 2020, the default template uses [Rollup](http://rollupjs.org) as its module bundler, though there is also an official [webpack loader](https://github.com/sveltejs/svelte-loader) and a plethora of third party integrations for Parcel, Snowpack, Vite and everything else you might want to use. Install Rollup...
@@ -36,12 +35,12 @@ npm i -D rollup
 
 ```js
 export default {
-	input: 'src/main.js',
-	output: {
-		file: 'public/build/bundle.js',
-		format: 'esm',
-		sourcemap: true
-	}
+    input: 'src/main.js',
+    output: {
+        file: 'public/build/bundle.js',
+        format: 'esm',
+        sourcemap: true,
+    },
 };
 ```
 
@@ -67,7 +66,7 @@ npx rollup -c
 
 ```js
 var hello = () => {
-	console.log('hello!');
+    console.log('hello!');
 };
 
 hello();
@@ -79,17 +78,17 @@ Now we just need to add a `public/index.html` file to load the bundle...
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-	<title>My app</title>
+        <title>My app</title>
 
-	<script type="module" src='/build/bundle.js'></script>
-</head>
-<body>
-	Open the console!
-</body>
+        <script type="module" src="/build/bundle.js"></script>
+    </head>
+    <body>
+        Open the console!
+    </body>
 </html>
 ```
 
@@ -100,18 +99,18 @@ npm i -D serve
 npx serve public
 ```
 
-
 ## Adding plugins
 
-That's cool, but not very Sveltey. We need to teach Rollup what to do when it encounters a Svelte file. We do that with **plugins**. Specifically, in addition to Svelte itself, we need two:
+That's cool, but not very Sveltey. We need to teach Rollup what to do when it encounters a Svelte file. We do that with **plugins**. Specifically, in addition to Svelte itself, we need three:
 
-* [rollup-plugin-svelte](https://www.npmjs.com/package/rollup-plugin-svelte)
-* [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve) — teaches Rollup how to find stuff in `node_modules`
+-   [rollup-plugin-svelte](https://www.npmjs.com/package/rollup-plugin-svelte)
+-   [@rollup/plugin-node-resolve](https://www.npmjs.com/package/@rollup/plugin-node-resolve) — teaches Rollup how to find stuff in `node_modules`
+-   [rollup-plugin-css-only](https://www.npmjs.com/package/rollup-plugin-css-only) — teaches Rollup how to bundle css
 
 Install those...
 
 ```bash
-npm i -D svelte rollup-plugin-svelte @rollup/plugin-node-resolve
+npm i -D svelte rollup-plugin-svelte @rollup/plugin-node-resolve rollup-plugin-css-only
 ```
 
 ...and add them to your config:
@@ -119,6 +118,7 @@ npm i -D svelte rollup-plugin-svelte @rollup/plugin-node-resolve
 ```diff
 +import resolve from '@rollup/plugin-node-resolve';
 +import svelte from 'rollup-plugin-svelte';
++import css from 'rollup-plugin-css-only';
 
 export default {
 	input: 'src/main.js',
@@ -130,9 +130,10 @@ export default {
 +	},
 +	plugins: [
 +		resolve(),
-+		svelte({
-+			css: result => result.write('public/bundle/bundle.css')
-+		})
++		svelte(),
++		css({
++			output: 'bundle.css'
++		}),
 +	]
 };
 ```
@@ -159,10 +160,10 @@ Now we can add a Svelte component. Create `App.svelte`...
 import App from './App.svelte';
 
 new App({
-	target: document.body,
-	props: {
-		name: 'world'
-	}
+    target: document.body,
+    props: {
+        name: 'world',
+    },
 });
 ```
 
