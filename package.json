@@ -17,7 +17,7 @@
     "marked": "^1.1.0",
     "polka": "next",
     "prism-svelte": "^0.4.6",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.23.0",
     "sirv": "^0.4.0"
   },
   "devDependencies": {
