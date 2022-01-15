@@ -14,7 +14,7 @@
   "dependencies": {
     "@sveltejs/site-kit": "^1.1.5",
     "compression": "^1.7.1",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "polka": "next",
     "prism-svelte": "^0.4.6",
     "prismjs": "^1.20.0",
